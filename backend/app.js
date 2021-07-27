@@ -30,7 +30,8 @@ app.use((req, res, next) => {
 
 //Transforme en Json
 app.use(bodyParser.json())
-//Importation des routes
+
+/*** Routes ****/
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
